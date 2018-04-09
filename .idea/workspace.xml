@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac7c9c3f-4ed7-409c-b801-e7b28d7517d8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/Table.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/OptionsWhenClientIsSeated.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/Seat.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/out/" />
@@ -17,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -35,6 +34,32 @@
               <folding>
                 <element signature="e#1035#1036#0" expanded="true" />
                 <element signature="e#1063#1064#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Seat.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/Seat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1351#1352#0" expanded="true" />
+                <element signature="e#1379#1380#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OptionsWhenClientIsSeated.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/OptionsWhenClientIsSeated.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="45" column="1" lean-forward="false" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,6 +87,8 @@
       <list>
         <option value="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/Table.java" />
         <option value="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/Main.java" />
+        <option value="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/Seat.java" />
+        <option value="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/OptionsWhenClientIsSeated.java" />
       </list>
     </option>
   </component>
@@ -262,6 +289,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/Table.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -273,11 +308,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/Seat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="306">
+          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1351#1352#0" expanded="true" />
+            <element signature="e#1379#1380#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/OptionsWhenClientIsSeated.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="1" lean-forward="false" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
