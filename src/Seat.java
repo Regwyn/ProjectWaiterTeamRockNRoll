@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 public class Seat {
 
     private JPanel panel;
-    final private JButton tableOne;
+    final private JButton seat;
     private int coordinatesX, coordinatesY, coordinatesW, coordinatesH, sizeX, sizeY;
     String imagePath;
 
@@ -20,11 +20,11 @@ public class Seat {
 
         panel = new JPanel();
         panel.setBounds(this.coordinatesX, this.coordinatesY, this.coordinatesW, this.coordinatesH);
-        tableOne = new JButton();
-        tableOne.setSize(this.sizeX, this.sizeY);
-        tableOne.setIcon(new ImageIcon(getClass().getResource(this.imagePath)));
-        tableOne.setVisible(true);
-        tableOne.addActionListener(new ActionListener() {
+        seat = new JButton();
+        seat.setSize(this.sizeX, this.sizeY);
+        seat.setIcon(new ImageIcon(getClass().getResource(this.imagePath)));
+        seat.setVisible(true);
+        seat.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 OptionsWhenClientIsSeated o = new OptionsWhenClientIsSeated();
@@ -32,9 +32,7 @@ public class Seat {
             }
         });
         panel.setOpaque(true);
-        panel.add(tableOne);
-
-
+        panel.add(seat);
     }
 
     public JPanel getPanel() {
