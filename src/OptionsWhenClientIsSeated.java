@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class OptionsWhenClientIsSeated extends JFrame {
 
@@ -24,9 +26,9 @@ public class OptionsWhenClientIsSeated extends JFrame {
         clientSeatNumberAndTableNumber.setLayout(new GridBagLayout());
         clientSeatNumberAndTableNumber.setVisible(true);
 
-        order.setBounds(160,130,285,45);
-        pay.setBounds(160,195,285,45);
-        leaveWithoutPaying.setBounds(160,260,280,45);
+        order.setBounds(160, 130, 285, 45);
+        pay.setBounds(160, 195, 285, 45);
+        leaveWithoutPaying.setBounds(160, 260, 280, 45);
 
 
         jFrame.setSize(600, 425);
@@ -42,5 +44,24 @@ public class OptionsWhenClientIsSeated extends JFrame {
         jFrame.add(pay);
         jFrame.add(leaveWithoutPaying);
         validate();
+
+        order.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        pay.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ConfirmationDialogue confirmationDialogue = new ConfirmationDialogue("   CONFIRM PAYMENT ?");
+            }
+        });
+        leaveWithoutPaying.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ConfirmationDialogue confirmationDialogue = new ConfirmationDialogue("   CONFIRM LEAVING ?");
+            }
+        });
     }
 }

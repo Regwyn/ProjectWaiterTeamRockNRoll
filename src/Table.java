@@ -3,7 +3,7 @@ import javax.swing.*;
 public class Table {
 
     private JPanel panel;
-    final private JButton tableOne;
+    final private JButton table;
     private int coordinatesX, coordinatesY, coordinatesW, coordinatesH, sizeX, sizeY;
     String imagePath;
 
@@ -18,12 +18,12 @@ public class Table {
 
         panel = new JPanel();
         panel.setBounds(this.coordinatesX, this.coordinatesY, this.coordinatesW, this.coordinatesH);
-        tableOne = new JButton();
-        tableOne.setSize(this.sizeX, this.sizeY);
-        tableOne.setIcon(new ImageIcon(getClass().getResource(this.imagePath)));
-        tableOne.setVisible(true);
+        table = new JButton();
+        table.setSize(this.sizeX, this.sizeY);
+        table.setIcon(new ImageIcon(getClass().getResource(this.imagePath)));
+        table.setVisible(true);
         panel.setOpaque(true);
-        panel.add(tableOne);
+        panel.add(table);
     }
 
     public JPanel getPanel() {
