@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac7c9c3f-4ed7-409c-b801-e7b28d7517d8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/PanelsWithFoodAndDrinksImages.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/out/production/ProjectWaiterTeamRockNRoll/OrdersManaging$1.class" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/out/production/ProjectWaiterTeamRockNRoll/OrdersManaging$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/out/production/ProjectWaiterTeamRockNRoll/OrdersManaging$2.class" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/out/production/ProjectWaiterTeamRockNRoll/OrdersManaging$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/out/production/ProjectWaiterTeamRockNRoll/OrdersManaging.class" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/out/production/ProjectWaiterTeamRockNRoll/OrdersManaging.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/OrdersManaging.java" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/OrdersManaging.java" />
     </list>
@@ -98,16 +94,16 @@
       <file leaf-file-name="OrdersManaging.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/OrdersManaging.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="285" column="73" lean-forward="true" selection-start-line="285" selection-start-column="73" selection-end-line="285" selection-end-column="73" />
+            <state relative-caret-position="496">
+              <caret line="200" column="141" lean-forward="false" selection-start-line="200" selection-start-column="141" selection-end-line="200" selection-end-column="141" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#14904#14905#0" expanded="true" />
-                <element signature="e#14971#14972#0" expanded="true" />
-                <element signature="e#15125#15126#0" expanded="true" />
-                <element signature="e#15188#15189#0" expanded="true" />
-                <element signature="e#16311#16312#0" expanded="true" />
-                <element signature="e#16366#16367#0" expanded="true" />
+                <element signature="e#14899#14900#0" expanded="true" />
+                <element signature="e#14966#14967#0" expanded="true" />
+                <element signature="e#15120#15121#0" expanded="true" />
+                <element signature="e#15183#15184#0" expanded="true" />
+                <element signature="e#16306#16307#0" expanded="true" />
+                <element signature="e#16361#16362#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -493,16 +489,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/OrdersManaging.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="285" column="73" lean-forward="true" selection-start-line="285" selection-start-column="73" selection-end-line="285" selection-end-column="73" />
+        <state relative-caret-position="496">
+          <caret line="200" column="141" lean-forward="false" selection-start-line="200" selection-start-column="141" selection-end-line="200" selection-end-column="141" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#14904#14905#0" expanded="true" />
-            <element signature="e#14971#14972#0" expanded="true" />
-            <element signature="e#15125#15126#0" expanded="true" />
-            <element signature="e#15188#15189#0" expanded="true" />
-            <element signature="e#16311#16312#0" expanded="true" />
-            <element signature="e#16366#16367#0" expanded="true" />
+            <element signature="e#14899#14900#0" expanded="true" />
+            <element signature="e#14966#14967#0" expanded="true" />
+            <element signature="e#15120#15121#0" expanded="true" />
+            <element signature="e#15183#15184#0" expanded="true" />
+            <element signature="e#16306#16307#0" expanded="true" />
+            <element signature="e#16361#16362#0" expanded="true" />
           </folding>
         </state>
       </provider>
