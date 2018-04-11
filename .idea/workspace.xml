@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac7c9c3f-4ed7-409c-b801-e7b28d7517d8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/out/production/ProjectWaiterTeamRockNRoll/ChairDown.jpg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/out/production/ProjectWaiterTeamRockNRoll/ChairLeft.jpg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/out/production/ProjectWaiterTeamRockNRoll/ChairRight.jpg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/out/production/ProjectWaiterTeamRockNRoll/ChairUp.jpg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/out/production/ProjectWaiterTeamRockNRoll/OrdersManaging$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/out/production/ProjectWaiterTeamRockNRoll/OrdersManaging$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/out/production/ProjectWaiterTeamRockNRoll/OrdersManaging.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/OrdersManaging.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/PanelsWithFoodAndDrinksImages.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/out/production/ProjectWaiterTeamRockNRoll/OrdersManaging$1.class" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/out/production/ProjectWaiterTeamRockNRoll/OrdersManaging$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/out/production/ProjectWaiterTeamRockNRoll/OrdersManaging$2.class" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/out/production/ProjectWaiterTeamRockNRoll/OrdersManaging$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/out/production/ProjectWaiterTeamRockNRoll/OrdersManaging.class" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/out/production/ProjectWaiterTeamRockNRoll/OrdersManaging.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/OrdersManaging.java" afterPath="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/OrdersManaging.java" />
     </list>
     <ignored path="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,7 +23,7 @@
         <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
                 <element signature="e#63#64#0" expanded="true" />
                 <element signature="e#125#126#0" expanded="true" />
@@ -39,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/HallRoomJFrame.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="156" column="68" lean-forward="true" selection-start-line="156" selection-start-column="68" selection-end-line="156" selection-end-column="68" />
+              <caret line="156" column="68" lean-forward="false" selection-start-line="156" selection-start-column="68" selection-end-line="156" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/Table.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+              <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
               <folding>
                 <element signature="e#1017#1018#0" expanded="true" />
                 <element signature="e#1045#1046#0" expanded="true" />
@@ -64,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/Seat.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1321#1322#0" expanded="true" />
@@ -101,16 +98,32 @@
       <file leaf-file-name="OrdersManaging.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/OrdersManaging.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="130" column="8" lean-forward="false" selection-start-line="130" selection-start-column="8" selection-end-line="130" selection-end-column="8" />
+            <state relative-caret-position="360">
+              <caret line="285" column="73" lean-forward="true" selection-start-line="285" selection-start-column="73" selection-end-line="285" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6741#6742#0" expanded="true" />
-                <element signature="e#6808#6809#0" expanded="true" />
-                <element signature="e#6962#6963#0" expanded="true" />
-                <element signature="e#7025#7026#0" expanded="true" />
-                <element signature="e#8147#8148#0" expanded="true" />
-                <element signature="e#8202#8203#0" expanded="true" />
+                <element signature="e#14904#14905#0" expanded="true" />
+                <element signature="e#14971#14972#0" expanded="true" />
+                <element signature="e#15125#15126#0" expanded="true" />
+                <element signature="e#15188#15189#0" expanded="true" />
+                <element signature="e#16311#16312#0" expanded="true" />
+                <element signature="e#16366#16367#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PanelsWithFoodAndDrinksImages.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/PanelsWithFoodAndDrinksImages.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1533#1534#0" expanded="true" />
+                <element signature="e#1598#1599#0" expanded="true" />
+                <element signature="e#1780#1781#0" expanded="true" />
+                <element signature="e#1814#1815#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -142,6 +155,8 @@
         <option value="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/Seat.java" />
         <option value="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/ConfirmationDialogue.java" />
         <option value="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/OptionsWhenClientIsSeated.java" />
+        <option value="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/PanelsWithFoodAndDrinkImages.java" />
+        <option value="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/PanelsWithFoodAndDrinksImages.java" />
         <option value="$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/OrdersManaging.java" />
       </list>
     </option>
@@ -413,7 +428,7 @@
     <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/Table.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
           <folding>
             <element signature="e#1017#1018#0" expanded="true" />
             <element signature="e#1045#1046#0" expanded="true" />
@@ -424,7 +439,7 @@
     <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/Seat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1321#1322#0" expanded="true" />
@@ -436,7 +451,7 @@
     <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <element signature="e#63#64#0" expanded="true" />
             <element signature="e#125#126#0" expanded="true" />
@@ -447,25 +462,47 @@
     <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/HallRoomJFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="156" column="68" lean-forward="true" selection-start-line="156" selection-start-column="68" selection-end-line="156" selection-end-column="68" />
+          <caret line="156" column="68" lean-forward="false" selection-start-line="156" selection-start-column="68" selection-end-line="156" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/OrdersManaging.java">
+    <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/PanelsWithFoodAndDrinkImages.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="130" column="8" lean-forward="false" selection-start-line="130" selection-start-column="8" selection-end-line="130" selection-end-column="8" />
+        <state relative-caret-position="187">
+          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/PanelsWithFoodAndDrinksImages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6741#6742#0" expanded="true" />
-            <element signature="e#6808#6809#0" expanded="true" />
-            <element signature="e#6962#6963#0" expanded="true" />
-            <element signature="e#7025#7026#0" expanded="true" />
-            <element signature="e#8147#8148#0" expanded="true" />
-            <element signature="e#8202#8203#0" expanded="true" />
+            <element signature="e#1533#1534#0" expanded="true" />
+            <element signature="e#1598#1599#0" expanded="true" />
+            <element signature="e#1780#1781#0" expanded="true" />
+            <element signature="e#1814#1815#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ProjectWaiterTeamRockNRoll/src/OrdersManaging.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="285" column="73" lean-forward="true" selection-start-line="285" selection-start-column="73" selection-end-line="285" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#14904#14905#0" expanded="true" />
+            <element signature="e#14971#14972#0" expanded="true" />
+            <element signature="e#15125#15126#0" expanded="true" />
+            <element signature="e#15188#15189#0" expanded="true" />
+            <element signature="e#16311#16312#0" expanded="true" />
+            <element signature="e#16366#16367#0" expanded="true" />
           </folding>
         </state>
       </provider>
