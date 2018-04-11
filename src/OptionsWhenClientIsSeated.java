@@ -31,19 +31,19 @@ public class OptionsWhenClientIsSeated extends JFrame {
         leaveWithoutPaying.setBounds(160, 260, 280, 45);
 
 
-        jFrame.setSize(600, 425);
-        jFrame.setLayout(new GridBagLayout());
-        jFrame.getContentPane().setLayout(null);
-        jFrame.setResizable(false);
-        jFrame.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        jFrame.setContentPane(new JLabel(new ImageIcon(getClass().getResource("Restaurant2.jpg"))));
-        jFrame.setVisible(true);
-        clientSeatNumberAndTableNumber.add(textForThePanel);
-        jFrame.add(clientSeatNumberAndTableNumber);
-        jFrame.add(order);
-        jFrame.add(pay);
-        jFrame.add(leaveWithoutPaying);
-        validate();
+//        jFrame.setSize(600, 425);
+//        jFrame.setLayout(new GridBagLayout());
+//        jFrame.getContentPane().setLayout(null);
+//        jFrame.setResizable(false);
+//        jFrame.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+//        jFrame.setContentPane(new JLabel(new ImageIcon(getClass().getResource("Restaurant2.jpg"))));
+//        jFrame.setVisible(true);
+//        clientSeatNumberAndTableNumber.add(textForThePanel);
+//        jFrame.add(clientSeatNumberAndTableNumber);
+//        jFrame.add(order);
+//        jFrame.add(pay);
+//        jFrame.add(leaveWithoutPaying);
+//        validate();
 
         order.addActionListener(new ActionListener() {
             @Override
