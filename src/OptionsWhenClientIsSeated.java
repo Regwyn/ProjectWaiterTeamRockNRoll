@@ -11,7 +11,7 @@ public class OptionsWhenClientIsSeated extends JFrame {
     private JButton leaveWithoutPaying;
     private JPanel clientSeatNumberAndTableNumber;
     private JLabel textForThePanel;
-
+//
     public OptionsWhenClientIsSeated() throws HeadlessException {
         jFrame = new JFrame();
         order = new JButton("ORDER");

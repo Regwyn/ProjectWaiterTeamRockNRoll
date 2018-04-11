@@ -2,77 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac7c9c3f-4ed7-409c-b801-e7b28d7517d8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/PanelsWithFoodAndDrinksImages$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/PanelsWithFoodAndDrinksImages.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/beans soup.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/beef soup.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/belly soup.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/borsh soup.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/caprese.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/chicken soup.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/chicken with rice.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/duck with potatoes.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/egg salad.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/guvech.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/kapama.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/kavarma.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/lasagna.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/meat sticks with fries.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/motley salad.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/musaka.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/mushroom cream soup.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/oak leaf salad.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/peas cream soup.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/peppers with cheese.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/pizza Romana.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/pizza carbonara.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/pizza margaritta.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/pizza mexicana.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/pizza napoletana.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/pizza pepperoni.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/potato cream soup.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/ricola salad with hamon and figs.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/sea gifts salad.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/sheperd's salad.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/zucchini.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/beans soup.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/beef soup.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/belly soup.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/borsh soup.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/caprese.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chicken soup.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chicken with rice.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/duck with potatoes.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/egg salad.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/guvech.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kapama.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kavarma.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/lasagna.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/meat sticks with fries.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/motley salad.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/musaka.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mushroom cream soup.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/oak leaf salad.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/peas cream soup.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/peppers with cheese.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pizza Romana.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pizza carbonara.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pizza margaritta.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pizza mexicana.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pizza napoletana.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pizza pepperoni.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/potato cream soup.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ricola salad with hamon and figs.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sea gifts salad.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sheperd's salad.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/zucchini.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PanelsWithFoodAndDrinksImages.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/OrdersManaging$1.class" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/OrdersManaging$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/OrdersManaging$2.class" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/OrdersManaging$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/OrdersManaging.class" afterPath="$PROJECT_DIR$/out/production/ProjectWaiterTeamRockNRoll/OrdersManaging.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OptionsWhenClientIsSeated.java" afterPath="$PROJECT_DIR$/src/OptionsWhenClientIsSeated.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OrdersManaging.java" afterPath="$PROJECT_DIR$/src/OrdersManaging.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -100,8 +30,8 @@
       <file leaf-file-name="OptionsWhenClientIsSeated.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/OptionsWhenClientIsSeated.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="170">
+              <caret line="13" column="2" lean-forward="false" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -354,8 +284,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OptionsWhenClientIsSeated.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="170">
+          <caret line="13" column="2" lean-forward="false" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
           <folding />
         </state>
       </provider>
