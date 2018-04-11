@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -13,11 +14,15 @@ public class PanelsWithFoodAndDrinksImages {
     private String imagePath;
     private final int panelWidth = 200;
     private final int panelHeight = 200;
+    private int itemID;
+    private static int counterID;
 
     public PanelsWithFoodAndDrinksImages(String itemName, String itemPrice, String imagePath) {
         this.itemName = itemName;
         this.itemPrice = itemPrice;
         this.imagePath = imagePath;
+        this.itemID = counterID;
+        this.counterID++;
 
         holderPanel = new JPanel();
         BoxLayout layoutForPanelThatHoldsTheKitchenPanelsWithFoods = new BoxLayout(holderPanel,1);
@@ -46,11 +51,15 @@ public class PanelsWithFoodAndDrinksImages {
         holderPanel.add(itemPriceJLabel);
     }
 
+    public int getItemID() {
+        return itemID;
+    }
+
     public JPanel getHolderPanel() {
         return holderPanel;
     }
 
     private void buttonWithImageActionPerformed(ActionEvent e){
-
+        System.out.println(getItemID());
     }
 }
