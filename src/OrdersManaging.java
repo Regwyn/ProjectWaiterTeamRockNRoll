@@ -198,7 +198,7 @@ public class OrdersManaging extends JFrame {
         pizzaNapoletana = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/pizza napoletana.jpg");
         pizzaPepperoni = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/pizza pepperoni.jpg");
         pizzaRomana = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/pizza Romana.jpg");
-        pizzaLasagna = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/pizza Romana.jpg");
+        pizzaLasagna = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/lasagna.jpg");
 
         holdsPanelsForTheKitchen.add(saladCaprese.getHolderPanel());
         holdsPanelsForTheKitchen.add(saladEggs.getHolderPanel());
