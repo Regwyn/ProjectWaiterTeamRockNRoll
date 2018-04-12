@@ -3,9 +3,4 @@ public class Main {
         HallRoomJFrame hallRoom = new HallRoomJFrame();
     }
 
-    // ****************** REMARK ****************** //
-
-    // ****************** REMARK 2 ****************** //
-
-
 }

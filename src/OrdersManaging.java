@@ -95,6 +95,8 @@ public class OrdersManaging extends JFrame {
     private PanelsWithFoodAndDrinksImages metaxa;
     private PanelsWithFoodAndDrinksImages tequilaPatron;
 
+    //private DropDownAutocompleteSearchBar menuSearchBar;
+
     public OrdersManaging() throws HeadlessException {
         super("ORDER MANAGER");
         initializeComponents();
@@ -229,12 +231,12 @@ public class OrdersManaging extends JFrame {
         double i = 5.0;
 
         saladCaprese = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/caprese.jpg");
-        saladEggs = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/egg salad.jpg");
-        saladMotley = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/motley salad.jpg");
-        saladOakLeaf = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/oak leaf salad.JPG");
-        saladPeppersWithCheese = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/peppers with cheese.jpg");
-        saladRucolaWithHamonAndFigs = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/ricola salad with hamon and figs.jpg");
-        saladSeaGifts = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/sea gifts salad.jpg");
+        saladEggs = new PanelsWithFoodAndDrinksImages("SALAD EGGS", ("PRICE:  5.80                             QTY:   " + i), "/egg salad.jpg");
+        saladMotley = new PanelsWithFoodAndDrinksImages("SALAD MOTLEY", ("PRICE:  5.80                             QTY:   " + i), "/motley salad.jpg");
+        saladOakLeaf = new PanelsWithFoodAndDrinksImages("SALAD OAK LEAF", ("PRICE:  5.80                             QTY:   " + i), "/oak leaf salad.JPG");
+        saladPeppersWithCheese = new PanelsWithFoodAndDrinksImages("SALAD PEPPERS WITH CHEESE", ("PRICE:  5.80                             QTY:   " + i), "/peppers with cheese.jpg");
+        saladRucolaWithHamonAndFigs = new PanelsWithFoodAndDrinksImages("SALAD RUCOLA WITH HAMON AND FIGS", ("PRICE:  5.80                             QTY:   " + i), "/ricola salad with hamon and figs.jpg");
+        saladSeaGifts = new PanelsWithFoodAndDrinksImages("SALAD SEA GIFTS", ("PRICE:  5.80                             QTY:   " + i), "/sea gifts salad.jpg");
 
         soupBeans = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/soupBeans.jpg");
         soupBelly = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/belly soup.jpg");
