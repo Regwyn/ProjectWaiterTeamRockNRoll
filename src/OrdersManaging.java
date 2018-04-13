@@ -1,4 +1,6 @@
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumn;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -36,6 +38,7 @@ public class OrdersManaging extends JFrame {
 
     private PanelsWithFoodAndDrinksImages foodOrDrinkItem;
 
+    DefaultTableModel dtm;
 
 
     public OrdersManaging() throws HeadlessException {
@@ -127,21 +130,22 @@ public class OrdersManaging extends JFrame {
 
 //        инициализиране на jTable
 
-        clientOrderJTable.setBounds(190, 10, 1350, 160);
+//       clientOrderJTable.setBounds(190, 10, 1350, 160);
         clientOrderJTableJScrollPane = new JScrollPane();
-        clientOrderJTable.setModel(new javax.swing.table.DefaultTableModel(
-                new Object[][]{
-                        {null, null, null, null},
-                        {null, null, null, null},
-                        {null, null, null, null},
-                        {null, null, null, null}
-                },
-                new String[]{
-                        "Title 1", "Title 2", "Title 3", "Title 4"
-                }
-        ));
+        TableColumn tableColumn = new TableColumn();
+
+        clientOrderJTable.addColumn(new TableColumn());
+
+        dtm = new DefaultTableModel(new String[] { "ID number", "Food Name", "Price", "QTY Left" }, 0);
+        clientOrderJTable.setModel(dtm);
+
+
 
         clientOrderJTableJScrollPane.setViewportView(clientOrderJTable);
+        JPanel panel = new JPanel();
+        panel.setBounds(190, 10, 1350, 160);
+        panel.setVisible(true);
+        panel.add(clientOrderJTableJScrollPane);
 
 //        инициализиране на двата панела, които ще държат менютата за кухня и бар
 
