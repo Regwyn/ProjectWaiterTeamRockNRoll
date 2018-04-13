@@ -145,8 +145,8 @@ public class OrdersManaging extends JFrame {
 
 //        инициализиране на двата панела, които ще държат менютата за кухня и бар
 
-        holdsPanelsForTheKitchen = new JPanel(); //ще държи панелите от другите класове дето са обекти-храни от кухнята
-        holdsPanelsForTheBar = new JPanel(); //ще държи панелите от другите класове дето са обекти-храни от бара
+        holdsPanelsForTheKitchen = new JPanel();
+        holdsPanelsForTheBar = new JPanel();
 
         holdsBothPanelsThatHoldThePanelsForTheKitchenAndBar = new JPanel();
         holdsBothPanelsThatHoldThePanelsForTheKitchenAndBar.setBackground(Color.GRAY);

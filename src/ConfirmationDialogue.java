@@ -23,7 +23,7 @@ public class ConfirmationDialogue extends JFrame {
         setLayout(new GridBagLayout());
         getContentPane().setLayout(null);
         setResizable(false);
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setVisible(true);
         add(label);
         add(yesButton);
@@ -46,20 +46,26 @@ public class ConfirmationDialogue extends JFrame {
     }
 
     private void yesButtonActionPerformed(ActionEvent e) {
+        HallRoomJFrame h = new HallRoomJFrame();
+
         Table table = new Table();
-        table.switcher();
-//        if(tableObject.getImagePath().equalsIgnoreCase("/TableOne 125x125.png") || tableObject.getImagePath().equalsIgnoreCase("/TableFour 125x125.png")){
-//            tableObject.getTable().setIcon(new javax.swing.ImageIcon(getClass().getResource("/Reserved4s.jpg")));
-//        }
-//        if(tableObject.getImagePath().equalsIgnoreCase("/TableTwo 250x250.png") || tableObject.getImagePath().equalsIgnoreCase("/TableThree 250x250.png")){
-//            tableObject.getTable().setIcon(new javax.swing.ImageIcon(getClass().getResource("/Reserved8s.jpg")));
-//        }
-//        if(tableObject.getImagePath().equalsIgnoreCase("/TableFive 250x350.png") || tableObject.getImagePath().equalsIgnoreCase("/TableEight 250x350.png")){
-//            tableObject.getTable().setIcon(new javax.swing.ImageIcon(getClass().getResource("/Reserved10s.jpg")));
-//        }
-//        if(tableObject.getImagePath().equalsIgnoreCase("/TableSix 175x210.png") || tableObject.getImagePath().equalsIgnoreCase("/TableSeven 175x210.png")){
-//            tableObject.getTable().setIcon(new javax.swing.ImageIcon(getClass().getResource("/Reserved6s.jpg")));
-//        }
+        table.getPanelHoldingTwoPanelsWithTables().removeAll();
+        table.getPanelHoldingTwoPanelsWithTables().removeAll();
+        table.getPanelHoldingTwoPanelsWithTables().removeAll();
+
+//        table.getPanelHoldingTwoPanelsWithTables().add(holdsPanelsForTheKitchen);
+//        table.getPanelHoldingTwoPanelsWithTables().add()
+        table.getPanelHoldingTwoPanelsWithTables().repaint();
+        table.getPanelHoldingTwoPanelsWithTables().revalidate();
+
+//            holdsBothPanelsThatHoldThePanelsForTheKitchenAndBar.removeAll();
+//            holdsBothPanelsThatHoldThePanelsForTheKitchenAndBar.repaint();
+//            holdsBothPanelsThatHoldThePanelsForTheKitchenAndBar.revalidate();
+//
+//            holdsBothPanelsThatHoldThePanelsForTheKitchenAndBar.add(holdsPanelsForTheKitchen);
+//            holdsBothPanelsThatHoldThePanelsForTheKitchenAndBar.repaint();
+//            holdsBothPanelsThatHoldThePanelsForTheKitchenAndBar.revalidate();
+
     }
 
     private void noButtonActionPerformed(ActionEvent e) {

@@ -1,6 +1,5 @@
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import javax.swing.event.CaretEvent;
 import javax.swing.event.CaretListener;
 import java.awt.*;
