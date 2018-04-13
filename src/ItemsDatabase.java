@@ -10,12 +10,12 @@ public class ItemsDatabase {
     private List<Integer> itemsQuantities = new ArrayList<Integer>();
     private List<String> itemsImagePath;
 
-    private int blocker;
+    private int newObjectCreationBlocker;
 
     public ItemsDatabase() {
         itemsNames = asList("SALAD CAPRESE", "SALAD EGGS", "SALAD MOTLEY", "SALAD OAK LEAF", "SALAD PEPPERS WITH CHEESE", "SALAD RUCOLA WITH HAMON AND FIGS", "SALAD SEA GIFTS",
                 "SOUP BEANS", "SOUP BELLY", "SOUP BORSH", "SOUP CHICKEN", "SOUP MUSHROOM CREAM", "SOUP PEAS CREAM", "SOUP POTATO CREAM",
-                "PEPPER WITH MEAT AND RICE", "DUCK WITH POTATOES", "GUVECH", "KAPAMA", "KAVARMA", "MUSAKA", "ZICCHINI",
+                "PEPPER WITH MEAT AND RICE", "DUCK WITH POTATOES", "GUVECH", "KAPAMA", "KAVARMA", "MUSAKA", "ZUCCHINI",
                 "PIZZA CARBONARA", "PIZZA MARGARITA", "PIZZA MEXICANA", "PIZZA NEAPOLITANA", "PIZZA PEPPERONI", "PIZZA ROMANA", "PIZZA LASAGNA",
                 "WATER", "CITRONADE", "CITRONADE GRAPEFRUIT", "FRESH WATERMELON", "JUICE ANANAS", "JUICE APPLE", "JUICE PEAR",
                 "JUICE PLUM", "LEMONADE", "ORANGEADE", "SMOOTHIE FORREST FRUIT AND BANANA", "SMOOTHIE FORREST FRUITS", "SMOOTHIE RASPBERRY", "TEA MINT",
@@ -23,7 +23,7 @@ public class ItemsDatabase {
                 "BLUEBERRY MARTINI", "CAMPARI", "GRAPE RAKIA", "PEAR RAKIA", "MAKERS MARK", "METAXA", "TEQUILA PATRON");
 
         itemsPrices = asList(5.80, 3.60, 6.30, 4.90, 4.60, 9.20, 8.90, 3.80, 3.90, 5.40, 3.60, 4.00, 4.20, 4.30, 5.20, 10.70, 10.40, 25.00, 14.00, 4.40, 3.20, 7.50, 8.40, 7.90, 6.80, 5.90, 6.80, 7.50, 9.00,
-                1.50, 3.20, 3.40, 2.80, 2.00, 3.50, 2.50, 2.50, 2.20, 2.20, 3.10, 3.20, 3.20, 1.50, 2.00, 2.20, 2.50, 1.90, 2.20, 2.40, 2.80, 7.90, 4.50, 2.80, 3.40, 6.50, 17.00, 12.00);
+                1.50, 3.20, 3.40, 2.80, 2.00, 3.50, 2.50, 2.50, 2.20, 2.20, 3.10, 3.20, 3.20, 1.50, 2.00, 2.20, 2.50, 1.90, 2.20, 2.40, 5.80, 7.90, 2.50, 2.80, 8.40, 17.00, 14.00);
 
         for (int i = 0; i < 56; i++) {
             itemsQuantities.add(100);
@@ -40,7 +40,7 @@ public class ItemsDatabase {
     }
 
     public ItemsDatabase(int blocker) {
-        this.blocker = blocker;
+        this.newObjectCreationBlocker = blocker;
     }
 
     public List<String> getItemsNames() {

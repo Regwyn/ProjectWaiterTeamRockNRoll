@@ -5,15 +5,13 @@ import java.awt.event.ActionListener;
 public class Seat {
 
     private JPanel panel;
-    final private JButton seat;
+    private JButton seat;
     private int coordinatesX, coordinatesY, coordinatesW, coordinatesH, sizeX, sizeY;
     String imagePath;
 
-    public Seat(int coordinatesX, int coordinatesY, int coordinatesW, int coordinatesH, int sizeX, int sizeY, String imagePath) {
-        this.coordinatesX = coordinatesX;
-        this.coordinatesY = coordinatesY;
-        this.coordinatesW = coordinatesW;
-        this.coordinatesH = coordinatesH;
+    private JPanel panelHoldingTwoPanelsWithSeats;
+
+    public Seat(int sizeX, int sizeY, String imagePath) {
         this.sizeX = sizeX;
         this.sizeY = sizeY;
         this.imagePath = imagePath;
@@ -35,7 +33,33 @@ public class Seat {
         panel.add(seat);
     }
 
+    public Seat(int coordinatesX, int coordinatesY, int coordinatesW, int coordinatesH, int sizeX, int sizeY) {
+        this.coordinatesX = coordinatesX;
+        this.coordinatesY = coordinatesY;
+        this.coordinatesW = coordinatesW;
+        this.coordinatesH = coordinatesH;
+        this.sizeX = sizeX;
+        this.sizeY = sizeY;
+
+        panelHoldingTwoPanelsWithSeats = new JPanel();
+        panelHoldingTwoPanelsWithSeats.setBounds(this.coordinatesX, this.coordinatesY, this.coordinatesW, this.coordinatesH);
+        panelHoldingTwoPanelsWithSeats.setOpaque(true);
+    }
+
+
     public JPanel getPanel() {
         return panel;
+    }
+
+    public JButton getSeat() {
+        return seat;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public JPanel getPanelHoldingTwoPanelsWithSeats() {
+        return panelHoldingTwoPanelsWithSeats;
     }
 }

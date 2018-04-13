@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 
 public class OptionsWhenClientIsSeated extends JFrame {
 
@@ -20,7 +21,7 @@ public class OptionsWhenClientIsSeated extends JFrame {
         clientSeatNumberAndTableNumber = new JPanel();
         textForThePanel = new JLabel("WHAT WOULD THE CLIENT LIKE TO DO ?");
 
-        clientSeatNumberAndTableNumber.setBackground(new java.awt.Color(0, 204, 204));
+        clientSeatNumberAndTableNumber.setBackground(new Color(0, 204, 204));
         clientSeatNumberAndTableNumber.setBounds(160, 25, 285, 85);
         clientSeatNumberAndTableNumber.setOpaque(true);
         clientSeatNumberAndTableNumber.setLayout(new GridBagLayout());
@@ -35,7 +36,7 @@ public class OptionsWhenClientIsSeated extends JFrame {
         jFrame.setLayout(new GridBagLayout());
         jFrame.getContentPane().setLayout(null);
         jFrame.setResizable(false);
-        jFrame.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        jFrame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         jFrame.setContentPane(new JLabel(new ImageIcon(getClass().getResource("Restaurant2.jpg"))));
         jFrame.setVisible(true);
         clientSeatNumberAndTableNumber.add(textForThePanel);
@@ -53,6 +54,7 @@ public class OptionsWhenClientIsSeated extends JFrame {
                 PanelsWithFoodAndDrinksImages.setCounterID(0);
                 OrdersManaging ordersManaging = new OrdersManaging();
 
+                closeWindow();
             }
         });
         pay.addActionListener(new ActionListener() {
@@ -67,5 +69,10 @@ public class OptionsWhenClientIsSeated extends JFrame {
                 ConfirmationDialogue confirmationDialogue = new ConfirmationDialogue("   CONFIRM LEAVING ?");
             }
         });
+    }
+
+    private void closeWindow(){
+        WindowEvent windowCloser = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
+        Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(windowCloser);
     }
 }
