@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class OrdersManaging extends JFrame {
 
@@ -31,69 +32,11 @@ public class OrdersManaging extends JFrame {
     private JPanel holdsPanelsForTheKitchen;
     private JPanel holdsPanelsForTheBar;
 
-    private PanelsWithFoodAndDrinksImages saladCaprese;
-    private PanelsWithFoodAndDrinksImages saladEggs;
-    private PanelsWithFoodAndDrinksImages saladMotley;
-    private PanelsWithFoodAndDrinksImages saladOakLeaf;
-    private PanelsWithFoodAndDrinksImages saladPeppersWithCheese;
-    private PanelsWithFoodAndDrinksImages saladRucolaWithHamonAndFigs;
-    private PanelsWithFoodAndDrinksImages saladSeaGifts;
+    private ArrayList<MenuItem> menuItems = new ArrayList<>();
 
-    private PanelsWithFoodAndDrinksImages soupBeans;
-    private PanelsWithFoodAndDrinksImages soupBelly;
-    private PanelsWithFoodAndDrinksImages soupBorsh;
-    private PanelsWithFoodAndDrinksImages soupChicken;
-    private PanelsWithFoodAndDrinksImages soupMushroomCream;
-    private PanelsWithFoodAndDrinksImages soupPeasCream;
-    private PanelsWithFoodAndDrinksImages soupPotatoCream;
+    private PanelsWithFoodAndDrinksImages foodOrDrinkItem;
 
-    private PanelsWithFoodAndDrinksImages peppersWithRiceAndMeat;
-    private PanelsWithFoodAndDrinksImages duckWithPotatoes;
-    private PanelsWithFoodAndDrinksImages guvech;
-    private PanelsWithFoodAndDrinksImages kapama;
-    private PanelsWithFoodAndDrinksImages kavarma;
-    private PanelsWithFoodAndDrinksImages musaka;
-    private PanelsWithFoodAndDrinksImages zucchini;
 
-    private PanelsWithFoodAndDrinksImages pizzaCarbonara;
-    private PanelsWithFoodAndDrinksImages pizzaMargaritta;
-    private PanelsWithFoodAndDrinksImages pizzaMexicana;
-    private PanelsWithFoodAndDrinksImages pizzaNapoletana;
-    private PanelsWithFoodAndDrinksImages pizzaPepperoni;
-    private PanelsWithFoodAndDrinksImages pizzaRomana;
-    private PanelsWithFoodAndDrinksImages pizzaLasagna;
-
-    private PanelsWithFoodAndDrinksImages water;
-    private PanelsWithFoodAndDrinksImages citronade;
-    private PanelsWithFoodAndDrinksImages citronadeGrapefruit;
-    private PanelsWithFoodAndDrinksImages freshWatermelon;
-    private PanelsWithFoodAndDrinksImages juiceAnanas;
-    private PanelsWithFoodAndDrinksImages juiceApple;
-    private PanelsWithFoodAndDrinksImages juicePear;
-
-    private PanelsWithFoodAndDrinksImages juicePlum;
-    private PanelsWithFoodAndDrinksImages lemonade;
-    private PanelsWithFoodAndDrinksImages orangeade;
-    private PanelsWithFoodAndDrinksImages smoothieForrestFruitAndBanana;
-    private PanelsWithFoodAndDrinksImages smoothieForrestFruits;
-    private PanelsWithFoodAndDrinksImages smoothieRaspberry;
-    private PanelsWithFoodAndDrinksImages teaMint;
-
-    private PanelsWithFoodAndDrinksImages biscuitLavazza;
-    private PanelsWithFoodAndDrinksImages cappuccino;
-    private PanelsWithFoodAndDrinksImages coffeeBreve;
-    private PanelsWithFoodAndDrinksImages coffeeEspresso;
-    private PanelsWithFoodAndDrinksImages coffeMocha;
-    private PanelsWithFoodAndDrinksImages irishCoffee;
-    private PanelsWithFoodAndDrinksImages latteMachiatto;
-
-    private PanelsWithFoodAndDrinksImages blueberrymartini;
-    private PanelsWithFoodAndDrinksImages campari;
-    private PanelsWithFoodAndDrinksImages grapeRakia;
-    private PanelsWithFoodAndDrinksImages pearRakia;
-    private PanelsWithFoodAndDrinksImages makersMark;
-    private PanelsWithFoodAndDrinksImages metaxa;
-    private PanelsWithFoodAndDrinksImages tequilaPatron;
 
     public OrdersManaging() throws HeadlessException {
         super("ORDER MANAGER");
@@ -120,7 +63,7 @@ public class OrdersManaging extends JFrame {
         holdsBothPanelsThatHoldThePanelsForTheKitchenAndBar.revalidate();
     }
 
-    private void initializeComponents(){
+    private void initializeComponents() {
 
         clientOrderJTable = new JTable();
 
@@ -226,140 +169,23 @@ public class OrdersManaging extends JFrame {
         holdsPanelsForTheBar.setVisible(true);
         holdsBothPanelsThatHoldThePanelsForTheKitchenAndBar.add(holdsPanelsForTheBar);
 
-        double i = 5.0;
+        ItemsDatabase itemsSpecifications = new ItemsDatabase();
 
-        saladCaprese = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/caprese.jpg");
-        saladEggs = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/egg salad.jpg");
-        saladMotley = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/motley salad.jpg");
-        saladOakLeaf = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/oak leaf salad.JPG");
-        saladPeppersWithCheese = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/peppers with cheese.jpg");
-        saladRucolaWithHamonAndFigs = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/ricola salad with hamon and figs.jpg");
-        saladSeaGifts = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/sea gifts salad.jpg");
+        for (int j = 0; j < itemsSpecifications.getItemsNames().size(); j++) {
+            String itemName = itemsSpecifications.getItemsNames().get(j);
+            double itemPrice = itemsSpecifications.getItemsPrices().get(j);
+            int itemQuantity = itemsSpecifications.getItemsQuantities().get(j);
+            String itemImagePath = itemsSpecifications.getItemsImagePath().get(j);
 
-        soupBeans = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/soupBeans.jpg");
-        soupBelly = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/belly soup.jpg");
-        soupBorsh = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/borsh soup.jpg");
-        soupChicken = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/chicken soup.jpg");
-        soupMushroomCream = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/mushroom cream soup.jpg");
-        soupPeasCream = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/peas cream soup.jpg");
-        soupPotatoCream = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/potato cream soup.jpg");
+            if (j < itemsSpecifications.getItemsNames().size() / 2) {
+                foodOrDrinkItem = new PanelsWithFoodAndDrinksImages(itemName, itemPrice, itemQuantity, itemImagePath);
+                holdsPanelsForTheKitchen.add(foodOrDrinkItem.getHolderPanel());
+            } else {
+                foodOrDrinkItem = new PanelsWithFoodAndDrinksImages(itemName, itemPrice, itemQuantity, itemImagePath);
+                holdsPanelsForTheBar.add(foodOrDrinkItem.getHolderPanel());
+            }
+        }
 
-        peppersWithRiceAndMeat = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/peppersWithRiceAndMeat.jpg");
-        duckWithPotatoes = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/duck with potatoes.png");
-        guvech = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/guvech.jpg");
-        kapama = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/kapama.jpg");
-        kavarma = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/kavarma.jpg");
-        musaka = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/musaka.jpg");
-        zucchini = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/zucchini.jpg");
-
-        pizzaCarbonara = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/pizza carbonara.jpg");
-        pizzaMargaritta = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/pizza margaritta.jpg");
-        pizzaMexicana = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/pizza mexicana.jpg");
-        pizzaNapoletana = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/pizza napoletana.jpg");
-        pizzaPepperoni = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/pizza pepperoni.jpg");
-        pizzaRomana = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/pizza Romana.jpg");
-        pizzaLasagna = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/lasagna.jpg");
-
-        water = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/water.jpg");
-        citronade = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/citronade.jpg");
-        citronadeGrapefruit = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/citronadeGrapefruit.jpg");
-        freshWatermelon = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/freshWatermelon.jpg");
-        juiceAnanas = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/juiceAnanas.jpg");
-        juiceApple = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/juiceApple.jpg");
-        juicePear = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/juicePear.jpg");
-
-        juicePlum = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/juicePlum.jpg");
-        lemonade = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/lemonade.jpg");
-        orangeade = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/orangeade.jpg");
-        smoothieForrestFruitAndBanana = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/smoothieForrestFruitAndBanana.jpg");
-        smoothieForrestFruits = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/smoothieForrestFruits.jpg");
-        smoothieRaspberry = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/smoothieRaspberry.jpg");
-        teaMint = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/teaMint.jpg");
-
-
-        biscuitLavazza = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/biscuitLavazza.jpg");
-        cappuccino = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/cappuccino.jpg");
-        coffeeBreve = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/coffeeBreve.png");
-        coffeeEspresso = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/coffeeEspresso.png");
-        coffeMocha = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/coffeMocha.jpg");
-        irishCoffee = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/irishCoffee.jpg");
-        latteMachiatto = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/latteMachiatto.jpg");
-//
-//
-        blueberrymartini = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/blueberrymartini.jpg");
-        campari = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/campari.jpg");
-        grapeRakia = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/grapeRakia.jpg");
-        pearRakia = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/pearRakia.jpg");
-        makersMark = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/makersMark.jpg");
-        metaxa = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/metaxa.jpg");
-        tequilaPatron = new PanelsWithFoodAndDrinksImages("SALAD CAPRESE", ("PRICE:  5.80                             QTY:   " + i), "/tequilaPatron.jpg");
-
-
-        holdsPanelsForTheKitchen.add(saladCaprese.getHolderPanel());
-        holdsPanelsForTheKitchen.add(saladEggs.getHolderPanel());
-        holdsPanelsForTheKitchen.add(saladMotley.getHolderPanel());
-        holdsPanelsForTheKitchen.add(saladOakLeaf.getHolderPanel());
-        holdsPanelsForTheKitchen.add(saladPeppersWithCheese.getHolderPanel());
-        holdsPanelsForTheKitchen.add(saladRucolaWithHamonAndFigs.getHolderPanel());
-        holdsPanelsForTheKitchen.add(saladSeaGifts.getHolderPanel());
-
-        holdsPanelsForTheKitchen.add(soupBeans.getHolderPanel());
-        holdsPanelsForTheKitchen.add(soupBelly.getHolderPanel());
-        holdsPanelsForTheKitchen.add(soupBorsh.getHolderPanel());
-        holdsPanelsForTheKitchen.add(soupChicken.getHolderPanel());
-        holdsPanelsForTheKitchen.add(soupMushroomCream.getHolderPanel());
-        holdsPanelsForTheKitchen.add(soupPeasCream.getHolderPanel());
-        holdsPanelsForTheKitchen.add(soupPotatoCream.getHolderPanel());
-
-        holdsPanelsForTheKitchen.add(peppersWithRiceAndMeat.getHolderPanel());
-        holdsPanelsForTheKitchen.add(duckWithPotatoes.getHolderPanel());
-        holdsPanelsForTheKitchen.add(guvech.getHolderPanel());
-        holdsPanelsForTheKitchen.add(kapama.getHolderPanel());
-        holdsPanelsForTheKitchen.add(kavarma.getHolderPanel());
-        holdsPanelsForTheKitchen.add(musaka.getHolderPanel());
-        holdsPanelsForTheKitchen.add(zucchini.getHolderPanel());
-
-        holdsPanelsForTheKitchen.add(pizzaCarbonara.getHolderPanel());
-        holdsPanelsForTheKitchen.add(pizzaMargaritta.getHolderPanel());
-        holdsPanelsForTheKitchen.add(pizzaMexicana.getHolderPanel());
-        holdsPanelsForTheKitchen.add(pizzaNapoletana.getHolderPanel());
-        holdsPanelsForTheKitchen.add(pizzaPepperoni.getHolderPanel());
-        holdsPanelsForTheKitchen.add(pizzaRomana.getHolderPanel());
-        holdsPanelsForTheKitchen.add(pizzaLasagna.getHolderPanel());
-
-
-
-        holdsPanelsForTheBar.add(water.getHolderPanel());
-        holdsPanelsForTheBar.add(citronade.getHolderPanel());
-        holdsPanelsForTheBar.add(citronadeGrapefruit.getHolderPanel());
-        holdsPanelsForTheBar.add(freshWatermelon.getHolderPanel());
-        holdsPanelsForTheBar.add(juiceAnanas.getHolderPanel());
-        holdsPanelsForTheBar.add(juiceApple.getHolderPanel());
-        holdsPanelsForTheBar.add(juicePear.getHolderPanel());
-
-        holdsPanelsForTheBar.add(juicePlum.getHolderPanel());
-        holdsPanelsForTheBar.add(lemonade.getHolderPanel());
-        holdsPanelsForTheBar.add(orangeade.getHolderPanel());
-        holdsPanelsForTheBar.add(smoothieForrestFruitAndBanana.getHolderPanel());
-        holdsPanelsForTheBar.add(smoothieForrestFruits.getHolderPanel());
-        holdsPanelsForTheBar.add(smoothieRaspberry.getHolderPanel());
-        holdsPanelsForTheBar.add(teaMint.getHolderPanel());
-
-        holdsPanelsForTheBar.add(biscuitLavazza.getHolderPanel());
-        holdsPanelsForTheBar.add(cappuccino.getHolderPanel());
-        holdsPanelsForTheBar.add(coffeeBreve.getHolderPanel());
-        holdsPanelsForTheBar.add(coffeeEspresso.getHolderPanel());
-        holdsPanelsForTheBar.add(coffeMocha.getHolderPanel());
-        holdsPanelsForTheBar.add(irishCoffee.getHolderPanel());
-        holdsPanelsForTheBar.add(latteMachiatto.getHolderPanel());
-
-        holdsPanelsForTheBar.add(blueberrymartini.getHolderPanel());
-        holdsPanelsForTheBar.add(campari.getHolderPanel());
-        holdsPanelsForTheBar.add(grapeRakia.getHolderPanel());
-        holdsPanelsForTheBar.add(pearRakia.getHolderPanel());
-        holdsPanelsForTheBar.add(makersMark.getHolderPanel());
-        holdsPanelsForTheBar.add(metaxa.getHolderPanel());
-        holdsPanelsForTheBar.add(tequilaPatron.getHolderPanel());
 
         panelForTableAndClientNumbersAndBills.add(tableNumberJLabel);
         panelForTableAndClientNumbersAndBills.add(tableNumberSelectorJComboBox);
@@ -396,5 +222,7 @@ public class OrdersManaging extends JFrame {
 
     public static void main(String[] args) {
         OrdersManaging o = new OrdersManaging();
+
+        System.out.println();
     }
 }

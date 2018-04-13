@@ -7,6 +7,10 @@ public class HallRoomJFrame extends JFrame {
 
     public HallRoomJFrame() throws HeadlessException {
         jFrame = new JFrame("Project Waiter");
+        initializeComponents();
+    }
+
+    private void initializeComponents(){
         label = new JLabel();
         label.setOpaque(true);
         jFrame.setContentPane(new JLabel(new ImageIcon(getClass().getResource("Restaurant3.jpg"))));
@@ -24,10 +28,10 @@ public class HallRoomJFrame extends JFrame {
         Table panelWithTimers = new Table(1710, 0, 120, 1139, 120, 1139, "/Restaurant1.jpg");
 
 
-        Seat tableOneSeatOne = new Seat(139, 143, 52, 58, 52, 58, "/ManOnTableUp.png");
-        Seat tableOneSeatTwo = new Seat(232, 235, 58, 52, 58, 52, "/ManOnTableRight.png");
-        Seat tableOneSeatThree = new Seat(139, 343, 52, 58, 52, 58, "/ManOnTableDown.png");
-        Seat tableOneSeatFour = new Seat(37, 240, 58, 52, 58, 52, "/ManOnTableLeft.png");
+        Seat tableOneSeatOne = new Seat(139, 143, 52, 58, 52, 58, "/ChairUp.jpg.jpg");
+        Seat tableOneSeatTwo = new Seat(232, 235, 58, 52, 58, 52, "/ChairRight.jpg.jpg");
+        Seat tableOneSeatThree = new Seat(139, 343, 52, 58, 52, 58, "/ChairDown.jpg.jpg");
+        Seat tableOneSeatFour = new Seat(37, 240, 58, 52, 58, 52, "/ChairLeft.jpg.jpg");
 
         Seat tableTwoSeatOne = new Seat(496, 62, 52, 58, 52, 58, "/ManOnTableUp.png");
         Seat tableTwoSeatTwo = new Seat(583, 62, 52, 58, 52, 58, "/ManOnTableUp.png");
