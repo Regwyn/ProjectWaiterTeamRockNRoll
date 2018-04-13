@@ -48,6 +48,10 @@ public class OptionsWhenClientIsSeated extends JFrame {
         order.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                PanelsWithFoodAndDrinksImages p = new PanelsWithFoodAndDrinksImages();
+                p.setItemID(0);
+                PanelsWithFoodAndDrinksImages.setCounterID(0);
+                OrdersManaging ordersManaging = new OrdersManaging();
 
             }
         });
