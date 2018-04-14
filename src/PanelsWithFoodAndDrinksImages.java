@@ -21,13 +21,14 @@ public class PanelsWithFoodAndDrinksImages {
     private static int counterID;
     private DefaultTableModel dtm;
 
-    public PanelsWithFoodAndDrinksImages(String itemName, double itemPrice, int itemQuantity, String itemImagePath) {
+    public PanelsWithFoodAndDrinksImages(String itemName, double itemPrice, int itemQuantity, String itemImagePath, DefaultTableModel dtm) {
         this.itemName = itemName;
         this.itemPrice = itemPrice;
         this.itemQuantity = itemQuantity;
         this.itemImagePath = itemImagePath;
         this.itemID = counterID;
         this.counterID++;
+        this.dtm = dtm;
 
         holderPanel = new JPanel();
         BoxLayout layoutForPanelThatHoldsTheKitchenPanelsWithFoods = new BoxLayout(holderPanel,1);
@@ -80,7 +81,7 @@ public class PanelsWithFoodAndDrinksImages {
         ArrayListClass a = new ArrayListClass();
         System.out.println(a.getItemNames().get(getItemID()));
         System.out.println(getItemID());
-        dtm.addRow(new Object[] { itemID,a.getItemNames().get(getItemID()),"data111",
+        dtm.addRow(new Object[] { getItemID(),a.getItemNames().get(getItemID()),"data111",
                 "data222"});
     }
 
