@@ -50,8 +50,8 @@ public class OptionsWhenClientIsSeated extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 PanelsWithFoodAndDrinksImages p = new PanelsWithFoodAndDrinksImages();
-//                p.setItemID(0);
-//                PanelsWithFoodAndDrinksImages.setCounterID(0);
+                p.setItemID(0);
+                PanelsWithFoodAndDrinksImages.setCounterID(0);
                 OrdersManaging ordersManaging = new OrdersManaging();
 
                 closeWindow();

@@ -9,7 +9,6 @@ public class SeatsDatabase {
     private final String chairRight = "/ChairRight.jpg.jpg";
     private final String chairLeft = "/ChairLeft.jpg.jpg";
 
-
     private final String manOnTableUp = "/ManOnTableUp.png";
     private final String manOnTableDown = "/ManOnTableDown.png";
     private final String manOnTableRight = "/ManOnTableRight.png";
