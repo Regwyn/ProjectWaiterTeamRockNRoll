@@ -12,14 +12,6 @@ public class TablesDatabase {
             212,126,126,212,521,649,649,521
     );
 
-    private final  List<Integer> coordinatesW = asList (
-            125,250,250,125,250,175,175,250
-    );
-
-    private final  List<Integer> coordinatesH = asList (
-            125,250,250,125,350,210,210,350
-    );
-
     private final  List<Integer> sizeX = asList (
             125,250,250,125,250,175,175,250
     );
@@ -57,26 +49,11 @@ public class TablesDatabase {
         return coordinatesY;
     }
 
-    public List<Integer> getCoordinatesW() {
-        return coordinatesW;
-    }
-
-    public List<Integer> getCoordinatesH() {
-        return coordinatesH;
-    }
-
     public List<Integer> getSizeX() {
         return sizeX;
     }
 
     public List<Integer> getSizeY() {
         return sizeY;
-    }
-
-    public static void main(String[] args) {
-
-
-        System.out.println();
-
     }
 }

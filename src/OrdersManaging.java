@@ -130,8 +130,8 @@ public class OrdersManaging extends JFrame {
 
 //        инициализиране на jTable
 
- //       clientOrderJTable.setBounds(190, 15, 1350, 160);
-        
+        //       clientOrderJTable.setBounds(190, 15, 1350, 160);
+
         clientOrderJTable.setPreferredSize(new Dimension(600, 14480));
         clientOrderJTableJScrollPane = new JScrollPane();
         TableColumn tableColumn = new TableColumn();
@@ -148,13 +148,13 @@ public class OrdersManaging extends JFrame {
         panel.setBounds(190, 10, 1350, 160);
         panel.setVisible(true);
         panel.add(clientOrderJTableJScrollPane);
-        
-        
-        JPanel scrollPanel = new JPanel(new BorderLayout());
-                 
-                panel.add(scrollPanel, BorderLayout.CENTER);
 
-        
+
+        JPanel scrollPanel = new JPanel(new BorderLayout());
+
+        panel.add(scrollPanel, BorderLayout.CENTER);
+
+
 //        инициализиране на двата панела, които ще държат менютата за кухня и бар
 
         holdsPanelsForTheKitchen = new JPanel();
@@ -209,7 +209,7 @@ public class OrdersManaging extends JFrame {
 //        panelForTableAndClientNumbersAndBills.add(menuSearchBar.getContentPanel());
 
         add(panelForTableAndClientNumbersAndBills);
-       // add(clientOrderJTable);
+        // add(clientOrderJTable);
         add(panel);
         setLayout(new GridBagLayout());
         getContentPane().setLayout(null);

@@ -9,31 +9,23 @@ public class HallRoomJFrame extends JFrame {
 
     private JPanel panelWhoHoldsFreeTables;
     private JPanel panelWhoHoldsReservedTables;
-    private JPanel panelWhoHoldsFreeAndReservedTables = new JPanel();
-
-    private Table table;
+    private JPanel panelWhoHoldsFreeAndReservedTables;
 
     private Table freeTable, reservedTable, panelWithTimers;
+
+    private JPanel panelWhoHoldsFreeSeats;
+    private JPanel panelWhoHoldsReservedSeats;
+    private JPanel panelWhoHoldsFreeAndReservedSeats;
+
 
     private Seat freeSeat, reservedSeat;
 
     private final TablesDatabase tablesDatabase = new TablesDatabase();
     private final SeatsDatabase seatsDatabase = new SeatsDatabase();
 
-    private int blocker;
-
-    private int temporaryTableCoordinateX = 0;
-    private int temporaryTableCoordinateY = 0;
-
-
-
     public HallRoomJFrame() throws HeadlessException {
         jFrame = new JFrame("Project Waiter");
         initializeComponents();
-    }
-
-    public HallRoomJFrame(int blocker) throws HeadlessException {
-        this.blocker = blocker;
     }
 
     private void initializeComponents() {
@@ -42,16 +34,9 @@ public class HallRoomJFrame extends JFrame {
         jFrame.setContentPane(new JLabel(new ImageIcon(getClass().getResource("Restaurant3.jpg"))));
         jFrame.add(label);
 
+        initializingTables();
 
-        initializingFreeTables();
-        initializingReservedTables();
-
-//        initializingSeats();
-
-
-
-        panelWithTimers = new Table(1710, 0, 120, 1139, 120, 1139, "/Restaurant1.jpg");
-        jFrame.getContentPane().add(panelWithTimers.getPanel());
+        initializingSeats();
 
         jFrame.setLayout(new GridBagLayout());
         jFrame.getContentPane().setLayout(null);
@@ -61,80 +46,53 @@ public class HallRoomJFrame extends JFrame {
         jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
     }
-    private void initializingFreeTables(){
-        for (int i = 0; i < tablesDatabase.getSizeX().size(); i++) {
 
+    private void initializingTables() {
+        for (int i = 0; i < tablesDatabase.getSizeX().size(); i++) {
+            panelWhoHoldsFreeAndReservedTables = new JPanel();
+            panelWhoHoldsFreeAndReservedTables.setBounds(tablesDatabase.getCoordinatesX().get(i), tablesDatabase.getCoordinatesY().get(i), tablesDatabase.getSizeX().get(i), tablesDatabase.getSizeY().get(i));
 
             panelWhoHoldsFreeTables = new JPanel();
-            panelWhoHoldsFreeTables.setBounds(tablesDatabase.getCoordinatesX().get(i),tablesDatabase.getCoordinatesY().get(i),tablesDatabase.getSizeX().get(i),tablesDatabase.getSizeY().get(i));
-            freeTable = new Table(tablesDatabase.getSizeX().get(i),tablesDatabase.getSizeY().get(i), tablesDatabase.getImagePathForFreeTables().get(i));
-            panelWhoHoldsFreeTables.add(freeTable.getPanel());
+            panelWhoHoldsFreeTables.setSize(tablesDatabase.getSizeX().get(i), tablesDatabase.getSizeY().get(i));
+            freeTable = new Table(tablesDatabase.getSizeX().get(i), tablesDatabase.getSizeY().get(i), tablesDatabase.getImagePathForFreeTables().get(i));
+
+            panelWhoHoldsReservedTables = new JPanel();
+            panelWhoHoldsReservedTables.setSize(tablesDatabase.getSizeX().get(i), tablesDatabase.getSizeY().get(i));
+            reservedTable = new Table(tablesDatabase.getSizeX().get(i), tablesDatabase.getSizeY().get(i), tablesDatabase.getImagePathForReservedTables().get(i));
+
+            panelWhoHoldsFreeTables.add(freeTable.getTable());
+            panelWhoHoldsReservedTables.add(reservedTable.getTable());
+
             panelWhoHoldsFreeAndReservedTables.add(panelWhoHoldsFreeTables);
-            jFrame.add(panelWhoHoldsFreeTables);
+            panelWhoHoldsFreeAndReservedTables.add(panelWhoHoldsReservedTables);
+
+            jFrame.add(panelWhoHoldsFreeAndReservedTables);
         }
 
-        panelWithTimers = new Table(1710, 0, 120, 1139, 120, 1139, "/Restaurant1.jpg");
+        panelWithTimers = new Table(1710, 0, 120, 1139, "/Restaurant1.jpg");
         jFrame.getContentPane().add(panelWithTimers.getPanel());
     }
 
-    private void initializingReservedTables(){
-        for (int i = 0; i < tablesDatabase.getSizeX().size(); i++) {
-            panelWhoHoldsReservedTables = new JPanel();
-            panelWhoHoldsReservedTables.setBounds(tablesDatabase.getCoordinatesX().get(i),tablesDatabase.getCoordinatesY().get(i),tablesDatabase.getSizeX().get(i),tablesDatabase.getSizeY().get(i));
-            reservedTable = new Table(tablesDatabase.getSizeX().get(i),tablesDatabase.getSizeY().get(i), tablesDatabase.getImagePathForReservedTables().get(i));
-            panelWhoHoldsReservedTables.add(reservedTable.getPanel());
-            panelWhoHoldsFreeAndReservedTables.add(panelWhoHoldsReservedTables);
-            jFrame.add(panelWhoHoldsReservedTables);
+    private void initializingSeats() {
+        for (int i = 0; i < seatsDatabase.getSizeX().size(); i++) {
+            panelWhoHoldsFreeAndReservedSeats = new JPanel();
+            panelWhoHoldsFreeAndReservedSeats.setBounds(seatsDatabase.getCoordinatesX().get(i), seatsDatabase.getCoordinatesY().get(i), seatsDatabase.getSizeX().get(i), seatsDatabase.getSizeY().get(i));
+
+            panelWhoHoldsFreeSeats = new JPanel();
+            panelWhoHoldsFreeSeats.setSize(seatsDatabase.getSizeX().get(i), seatsDatabase.getSizeY().get(i));
+            freeSeat = new Seat(seatsDatabase.getSizeX().get(i), seatsDatabase.getSizeY().get(i), seatsDatabase.getImagePathsForSeatsWithChairs().get(i));
+
+            panelWhoHoldsReservedSeats = new JPanel();
+            panelWhoHoldsReservedSeats.setSize(seatsDatabase.getSizeX().get(i), seatsDatabase.getSizeY().get(i));
+            reservedSeat = new Seat(seatsDatabase.getSizeX().get(i), seatsDatabase.getSizeY().get(i), seatsDatabase.getImagePathsForSeatsWithPeople().get(i));
+
+            panelWhoHoldsFreeSeats.add(freeSeat.getSeat());
+            panelWhoHoldsReservedSeats.add(reservedSeat.getSeat());
+
+            panelWhoHoldsFreeAndReservedSeats.add(panelWhoHoldsFreeSeats);
+            panelWhoHoldsFreeAndReservedSeats.add(panelWhoHoldsReservedSeats);
+
+            jFrame.add(panelWhoHoldsFreeAndReservedSeats);
         }
-    }
-
-//    private void initializingSeats(){
-//        for (int i = 0; i < seatsDatabase.getSizeX().size(); i++) {
-//            freeSeat = new Seat(seatsDatabase.getSizeX().get(i),seatsDatabase.getSizeY().get(i), seatsDatabase.getImagePathsForSeatsWithChairs().get(i));
-//
-//            reservedSeat = new Seat(seatsDatabase.getSizeX().get(i),seatsDatabase.getSizeY().get(i), seatsDatabase.getImagePathsForSeatsWithPeople().get(i));
-//
-//            panelHoldingTwoPanels  = new Table(seatsDatabase.getCoordinatesX().get(i),seatsDatabase.getCoordinatesY().get(i),seatsDatabase.getCoordinatesW().get(i),
-//                    seatsDatabase.getCoordinatesH().get(i),seatsDatabase.getSizeX().get(i),seatsDatabase.getSizeY().get(i));
-//
-//
-//            panelHoldingTwoPanels.getPanelHoldingTwoPanelsWithTables().add(reservedSeat.getPanel());
-//            panelHoldingTwoPanels.getPanelHoldingTwoPanelsWithTables().add(freeSeat.getPanel());
-//
-//
-//            jFrame.add(panelHoldingTwoPanels.getPanelHoldingTwoPanelsWithTables());
-//        }
-//    }
-
-    public JPanel getPanelWhoHoldsFreeTables() {
-        return panelWhoHoldsFreeTables;
-    }
-
-    public JPanel getPanelWhoHoldsReservedTables() {
-        return panelWhoHoldsReservedTables;
-    }
-
-    public Table getReservedTable() {
-        return reservedTable;
-    }
-
-    public JPanel getPanelWhoHoldsFreeAndReservedTables() {
-        return panelWhoHoldsFreeAndReservedTables;
-    }
-
-    public int getTemporaryTableCoordinateX() {
-        return temporaryTableCoordinateX;
-    }
-
-    public void setTemporaryTableCoordinateX(int temporaryTableCoordinateX) {
-        this.temporaryTableCoordinateX = temporaryTableCoordinateX;
-    }
-
-    public int getTemporaryTableCoordinateY() {
-        return temporaryTableCoordinateY;
-    }
-
-    public void setTemporaryTableCoordinateY(int temporaryTableCoordinateY) {
-        this.temporaryTableCoordinateY = temporaryTableCoordinateY;
     }
 }

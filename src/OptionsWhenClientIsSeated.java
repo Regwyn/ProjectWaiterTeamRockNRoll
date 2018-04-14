@@ -21,7 +21,7 @@ public class OptionsWhenClientIsSeated extends JFrame {
         clientSeatNumberAndTableNumber = new JPanel();
         textForThePanel = new JLabel("WHAT WOULD THE CLIENT LIKE TO DO ?");
 
-        clientSeatNumberAndTableNumber.setBackground(new Color(0, 204, 204));
+        clientSeatNumberAndTableNumber.setBackground(new java.awt.Color(0, 204, 204));
         clientSeatNumberAndTableNumber.setBounds(160, 25, 285, 85);
         clientSeatNumberAndTableNumber.setOpaque(true);
         clientSeatNumberAndTableNumber.setLayout(new GridBagLayout());
@@ -36,7 +36,7 @@ public class OptionsWhenClientIsSeated extends JFrame {
         jFrame.setLayout(new GridBagLayout());
         jFrame.getContentPane().setLayout(null);
         jFrame.setResizable(false);
-        jFrame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        jFrame.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         jFrame.setContentPane(new JLabel(new ImageIcon(getClass().getResource("Restaurant2.jpg"))));
         jFrame.setVisible(true);
         clientSeatNumberAndTableNumber.add(textForThePanel);

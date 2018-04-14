@@ -4,26 +4,26 @@ import java.awt.event.ActionListener;
 
 public class Table {
 
-
-
     private JPanel panel;
     private JButton table;
-    private int coordinatesX, coordinatesY, coordinatesW, coordinatesH, sizeX, sizeY;
+    private int coordinatesX, coordinatesY, sizeX, sizeY;
     private String imagePath;
 
-    private JPanel panelHoldingTwoPanelsWithTables;
+    private int tableID;
+    private static int counterID;
 
-    public Table(int coordinatesX, int coordinatesY, int coordinatesW, int coordinatesH, int sizeX, int sizeY, String imagePath) {
+    public Table(int coordinatesX, int coordinatesY, int sizeX, int sizeY, String imagePath) {
         this.coordinatesX = coordinatesX;
         this.coordinatesY = coordinatesY;
-        this.coordinatesW = coordinatesW;
-        this.coordinatesH = coordinatesH;
         this.sizeX = sizeX;
         this.sizeY = sizeY;
         this.imagePath = imagePath;
+        this.tableID = counterID;
+        this.counterID++;
+
 
         panel = new JPanel();
-        panel.setBounds(this.coordinatesX, this.coordinatesY, this.coordinatesW, this.coordinatesH);
+        panel.setBounds(this.coordinatesX, this.coordinatesY, this.sizeX, this.sizeY);
         table = new JButton();
         table.setSize(this.sizeX, this.sizeY);
         table.setIcon(new ImageIcon(getClass().getResource(this.imagePath)));
@@ -35,7 +35,7 @@ public class Table {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                buttonWithImageActionPerformed(e);
+                timerJButtonActionPerformed(e);
             }
         });
     }
@@ -44,16 +44,15 @@ public class Table {
         this.sizeX = sizeX;
         this.sizeY = sizeY;
         this.imagePath = imagePath;
+        this.tableID = counterID;
+        this.counterID++;
 
-        panel = new JPanel();
-        panel.setBounds(this.coordinatesX, this.coordinatesY, this.coordinatesW, this.coordinatesH);
-        panel.setSize(this.sizeX,this.sizeY);
+
         table = new JButton();
         table.setSize(this.sizeX, this.sizeY);
         table.setIcon(new ImageIcon(getClass().getResource(this.imagePath)));
         table.setVisible(true);
-        panel.setOpaque(true);
-        panel.add(table);
+
 
         table.addActionListener(new ActionListener() {
             @Override
@@ -64,57 +63,19 @@ public class Table {
         });
     }
 
-    public Table(int coordinatesX, int coordinatesY, int coordinatesW, int coordinatesH, int sizeX, int sizeY) {
-        this.coordinatesX = coordinatesX;
-        this.coordinatesY = coordinatesY;
-        this.coordinatesW = coordinatesW;
-        this.coordinatesH = coordinatesH;
-        this.sizeX = sizeX;
-        this.sizeY = sizeY;
-
-        panelHoldingTwoPanelsWithTables = new JPanel();
-        panelHoldingTwoPanelsWithTables.setBounds(this.coordinatesX, this.coordinatesY, this.coordinatesW, this.coordinatesH);
-        panelHoldingTwoPanelsWithTables.setOpaque(true);
-    }
-
-    public Table() {
-    }
-
     public JPanel getPanel() {
         return panel;
     }
 
-    public String getImagePath() {
-        return imagePath;
-    }
-
-
-    public JPanel getPanelHoldingTwoPanelsWithTables() {
-        return panelHoldingTwoPanelsWithTables;
-    }
-
-    public int getCoordinatesX() {
-        return coordinatesX;
-    }
-
-    public int getCoordinatesY() {
-        return coordinatesY;
-    }
-
-    void buttonWithImageActionPerformed(ActionEvent e) {
-        ConfirmationDialogue confirmationDialogue = new ConfirmationDialogue("CONFIRM RESERVATION ?");
+    private void timerJButtonActionPerformed(ActionEvent e){
 
     }
 
     private void tableButtonActionPerformed(ActionEvent e) {
-//        ConfirmationDialogue c = new ConfirmationDialogue("");
 
-        System.out.println(getCoordinatesX());
+    }
 
-        HallRoomJFrame hallRoom = new HallRoomJFrame(1);
-        hallRoom.setTemporaryTableCoordinateX(getCoordinatesX());
-        hallRoom.setTemporaryTableCoordinateY(getCoordinatesY());
-
-
+    public JButton getTable() {
+        return table;
     }
 }

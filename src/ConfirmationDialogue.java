@@ -23,7 +23,7 @@ public class ConfirmationDialogue extends JFrame {
         setLayout(new GridBagLayout());
         getContentPane().setLayout(null);
         setResizable(false);
-        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setVisible(true);
         add(label);
         add(yesButton);
@@ -46,26 +46,6 @@ public class ConfirmationDialogue extends JFrame {
     }
 
     private void yesButtonActionPerformed(ActionEvent e) {
-        HallRoomJFrame hallRoomBlocker = new HallRoomJFrame(1);
-
-
-        hallRoomBlocker.getPanelWhoHoldsFreeAndReservedTables().getComponentAt(hallRoomBlocker.getTemporaryTableCoordinateX(),hallRoomBlocker.getTemporaryTableCoordinateY()).repaint();
-        hallRoomBlocker.getPanelWhoHoldsFreeAndReservedTables().getComponentAt(hallRoomBlocker.getTemporaryTableCoordinateX(),hallRoomBlocker.getTemporaryTableCoordinateY()).revalidate();
-
-
-//        hallRoomBlocker.getPanelWhoHoldsFreeAndReservedTables().getComponentAt()
-        hallRoomBlocker.getPanelWhoHoldsFreeAndReservedTables().getComponentAt(hallRoomBlocker.getTemporaryTableCoordinateX(),hallRoomBlocker.getTemporaryTableCoordinateY()).repaint();
-        hallRoomBlocker.getPanelWhoHoldsFreeAndReservedTables().getComponentAt(hallRoomBlocker.getTemporaryTableCoordinateX(),hallRoomBlocker.getTemporaryTableCoordinateY()).revalidate();
-
-        System.out.println(hallRoomBlocker.getTemporaryTableCoordinateX());
-
-//            holdsBothPanelsThatHoldThePanelsForTheKitchenAndBar.removeAll();
-//            holdsBothPanelsThatHoldThePanelsForTheKitchenAndBar.repaint();
-//            holdsBothPanelsThatHoldThePanelsForTheKitchenAndBar.revalidate();
-//
-//            holdsBothPanelsThatHoldThePanelsForTheKitchenAndBar.add(holdsPanelsForTheKitchen);
-//            holdsBothPanelsThatHoldThePanelsForTheKitchenAndBar.repaint();
-//            holdsBothPanelsThatHoldThePanelsForTheKitchenAndBar.revalidate();
 
     }
 
