@@ -1,7 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class ConfirmationDialogue extends JFrame{
+public class ConfirmationDialogue extends JFrame {
 
     private String confirmQuestionForTheJLabel;
     private JLabel label;
@@ -13,9 +15,9 @@ public class ConfirmationDialogue extends JFrame{
 
         label = new JLabel(this.confirmQuestionForTheJLabel);
 
-        label.setBounds(100,30,150,15);
-        yesButton.setBounds(40,90, 110,30);
-        noButton.setBounds(195,90,110,30);
+        label.setBounds(100, 30, 150, 15);
+        yesButton.setBounds(40, 90, 110, 30);
+        noButton.setBounds(195, 90, 110, 30);
 
         setSize(350, 200);
         setLayout(new GridBagLayout());
@@ -27,5 +29,28 @@ public class ConfirmationDialogue extends JFrame{
         add(yesButton);
         add(noButton);
         validate();
+
+        yesButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                yesButtonActionPerformed(e);
+            }
+        });
+
+        noButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                noButtonActionPerformed(e);
+            }
+        });
     }
+
+    private void yesButtonActionPerformed(ActionEvent e) {
+
+    }
+
+    private void noButtonActionPerformed(ActionEvent e) {
+
+    }
+
 }

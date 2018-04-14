@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 
 public class OptionsWhenClientIsSeated extends JFrame {
 
@@ -48,7 +49,12 @@ public class OptionsWhenClientIsSeated extends JFrame {
         order.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                PanelsWithFoodAndDrinksImages p = new PanelsWithFoodAndDrinksImages();
+//                p.setItemID(0);
+//                PanelsWithFoodAndDrinksImages.setCounterID(0);
+                OrdersManaging ordersManaging = new OrdersManaging();
 
+                closeWindow();
             }
         });
         pay.addActionListener(new ActionListener() {
@@ -63,5 +69,10 @@ public class OptionsWhenClientIsSeated extends JFrame {
                 ConfirmationDialogue confirmationDialogue = new ConfirmationDialogue("   CONFIRM LEAVING ?");
             }
         });
+    }
+
+    private void closeWindow(){
+        WindowEvent windowCloser = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
+        Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(windowCloser);
     }
 }
