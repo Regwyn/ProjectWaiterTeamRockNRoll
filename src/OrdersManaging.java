@@ -1,4 +1,6 @@
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumn;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -36,6 +38,7 @@ public class OrdersManaging extends JFrame {
 
     private PanelsWithFoodAndDrinksImages foodOrDrinkItem;
 
+    DefaultTableModel dtm;
 
 
     public OrdersManaging() throws HeadlessException {
@@ -127,22 +130,31 @@ public class OrdersManaging extends JFrame {
 
 //        инициализиране на jTable
 
-        clientOrderJTable.setBounds(190, 10, 1350, 160);
+ //       clientOrderJTable.setBounds(190, 15, 1350, 160);
+        
+        clientOrderJTable.setPreferredSize(new Dimension(600, 14480));
         clientOrderJTableJScrollPane = new JScrollPane();
-        clientOrderJTable.setModel(new javax.swing.table.DefaultTableModel(
-                new Object[][]{
-                        {null, null, null, null},
-                        {null, null, null, null},
-                        {null, null, null, null},
-                        {null, null, null, null}
-                },
-                new String[]{
-                        "Title 1", "Title 2", "Title 3", "Title 4"
-                }
-        ));
+        TableColumn tableColumn = new TableColumn();
+
+        clientOrderJTable.addColumn(new TableColumn());
+
+        dtm = new DefaultTableModel(new String[] { "ID number", "Food Name", "Price", "QTY Left" }, 0);
+        clientOrderJTable.setModel(dtm);
+
+
 
         clientOrderJTableJScrollPane.setViewportView(clientOrderJTable);
+        JPanel panel = new JPanel();
+        panel.setBounds(190, 10, 1350, 160);
+        panel.setVisible(true);
+        panel.add(clientOrderJTableJScrollPane);
+        
+        
+        JPanel scrollPanel = new JPanel(new BorderLayout());
+                 
+                panel.add(scrollPanel, BorderLayout.CENTER);
 
+        
 //        инициализиране на двата панела, които ще държат менютата за кухня и бар
 
         holdsPanelsForTheKitchen = new JPanel();
@@ -178,10 +190,10 @@ public class OrdersManaging extends JFrame {
             String itemImagePath = itemsSpecifications.getItemsImagePath().get(j);
 
             if (j < itemsSpecifications.getItemsNames().size() / 2) {
-                foodOrDrinkItem = new PanelsWithFoodAndDrinksImages(itemName, itemPrice, itemQuantity, itemImagePath);
+                foodOrDrinkItem = new PanelsWithFoodAndDrinksImages(itemName, itemPrice, itemQuantity, itemImagePath, dtm);
                 holdsPanelsForTheKitchen.add(foodOrDrinkItem.getHolderPanel());
             } else {
-                foodOrDrinkItem = new PanelsWithFoodAndDrinksImages(itemName, itemPrice, itemQuantity, itemImagePath);
+                foodOrDrinkItem = new PanelsWithFoodAndDrinksImages(itemName, itemPrice, itemQuantity, itemImagePath, dtm);
                 holdsPanelsForTheBar.add(foodOrDrinkItem.getHolderPanel());
             }
         }
@@ -197,8 +209,8 @@ public class OrdersManaging extends JFrame {
 //        panelForTableAndClientNumbersAndBills.add(menuSearchBar.getContentPanel());
 
         add(panelForTableAndClientNumbersAndBills);
-        add(clientOrderJTable);
-
+       // add(clientOrderJTable);
+        add(panel);
         setLayout(new GridBagLayout());
         getContentPane().setLayout(null);
         setVisible(true);

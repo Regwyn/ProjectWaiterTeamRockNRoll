@@ -59,7 +59,7 @@ public class Table {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                buttonWithImageActionPerformed(e);
+                tableButtonActionPerformed(e);
             }
         });
     }
@@ -93,9 +93,27 @@ public class Table {
         return panelHoldingTwoPanelsWithTables;
     }
 
+    public int getCoordinatesX() {
+        return coordinatesX;
+    }
+
+    public int getCoordinatesY() {
+        return coordinatesY;
+    }
+
     void buttonWithImageActionPerformed(ActionEvent e) {
         ConfirmationDialogue confirmationDialogue = new ConfirmationDialogue("CONFIRM RESERVATION ?");
 
+    }
+
+    private void tableButtonActionPerformed(ActionEvent e) {
+//        ConfirmationDialogue c = new ConfirmationDialogue("");
+
+        System.out.println(getCoordinatesX());
+
+        HallRoomJFrame hallRoom = new HallRoomJFrame(1);
+        hallRoom.setTemporaryTableCoordinateX(getCoordinatesX());
+        hallRoom.setTemporaryTableCoordinateY(getCoordinatesY());
 
 
     }

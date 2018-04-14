@@ -1,4 +1,5 @@
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -18,14 +19,16 @@ public class PanelsWithFoodAndDrinksImages {
     private final int panelHeight = 200;
     private int itemID;
     private static int counterID;
+    private DefaultTableModel dtm;
 
-    public PanelsWithFoodAndDrinksImages(String itemName, double itemPrice, int itemQuantity, String itemImagePath) {
+    public PanelsWithFoodAndDrinksImages(String itemName, double itemPrice, int itemQuantity, String itemImagePath, DefaultTableModel dtm) {
         this.itemName = itemName;
         this.itemPrice = itemPrice;
         this.itemQuantity = itemQuantity;
         this.itemImagePath = itemImagePath;
         this.itemID = counterID;
         this.counterID++;
+        this.dtm = dtm;
 
         holderPanel = new JPanel();
         BoxLayout layoutForPanelThatHoldsTheKitchenPanelsWithFoods = new BoxLayout(holderPanel,1);
@@ -57,6 +60,14 @@ public class PanelsWithFoodAndDrinksImages {
     public PanelsWithFoodAndDrinksImages() {
     }
 
+    public static void setCounterID(int counterID) {
+        PanelsWithFoodAndDrinksImages.counterID = counterID;
+    }
+
+    public void setItemID(int itemID) {
+        this.itemID = itemID;
+    }
+
     public int getItemID() {
         return itemID;
     }
@@ -65,19 +76,15 @@ public class PanelsWithFoodAndDrinksImages {
         return holderPanel;
     }
 
-    public void setItemID(int itemID) {
-        this.itemID = itemID;
-    }
-
-    public String getItemName() {
-        return itemName;
-    }
-
-    public static void setCounterID(int counterID) {
-        PanelsWithFoodAndDrinksImages.counterID = counterID;
-    }
-
     private void buttonWithImageActionPerformed(ActionEvent e){
-        System.out.println(getItemName());
+
+        ArrayListClass a = new ArrayListClass();
+        System.out.println(a.getItemNames().get(getItemID()));
+        System.out.println(getItemID());
+        dtm.addRow(new Object[] { getItemID(),a.getItemNames().get(getItemID()),"data111",
+                "data222"});
     }
+
+
 }
+
